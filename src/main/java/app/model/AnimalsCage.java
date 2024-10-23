@@ -9,18 +9,21 @@ public class AnimalsCage {
 
     @Autowired
     @Qualifier("dog")
+   
     private Animal animal;
+    private Timer timer = new Timer();
+
     public void whatAnimalSay() {
         System.out.println("Say:");
         System.out.println(animal.toString());
         System.out.println("At:");
-        System.out.println(getTime());
+        System.out.println(timer.getTime());
         System.out.println("________________________");
     }
 
     
     public Long getTime() {
-        long time = 68755765;
+        long time = 0;
         return time;
     }
 }

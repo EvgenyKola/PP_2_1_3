@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class MainTest {
 
     @Autowired
-
+    @Qualifier("timer")
     private ApplicationContext applicationContext;
 
     @Test
