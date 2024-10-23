@@ -11,7 +11,11 @@ public class AnimalsCage {
     @Qualifier("dog")
    
     private Animal animal;
-    private Timer timer = new Timer();
+
+    @Autowired
+    @Qualifier("timer")
+
+    private Timer timer;
 
     public void whatAnimalSay() {
         System.out.println("Say:");
@@ -21,9 +25,7 @@ public class AnimalsCage {
         System.out.println("________________________");
     }
 
-    
-    public Long getTime() {
-        long time = 0;
-        return time;
+    public long getTime() {
+        return timer.getTime();
     }
 }
